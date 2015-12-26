@@ -1,5 +1,10 @@
 <html>
 <head>
+<link rel="shortcut icon" type="imgage/png" href="img/logo.ico">
+<title>
+	Anyums Design
+</title>
+
 <style>
 body {
 	text-align: center;
@@ -19,12 +24,19 @@ li {
 	display: block;
 	width: 400px;
 }
-</style>
-<link rel="shortcut icon" type="imgage/png" href="img/logo.ico">
-<title>
 
-	Anyums Design
-</title>
+.fadein { position:relative; height:320px; width:500px; }
+.fadein img { position:absolute; left:0; top:0; }
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+$(function(){
+	$('.fadein img:gt(0)').hide();
+	setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 6000);
+});
+
+</script>
 </head>
 <body>
 		<table align="center" >
@@ -46,8 +58,15 @@ li {
 				<td>Infrastructure</td>
 			</tr>
 			<tr>
-				<td colspan="100%" align="center">
-				Placeholder for image slideshow
+				<td colspan="100%">
+				<div class="fadein">
+				   <img height="320px" width="500px" src="img/simg1.jpeg">
+				   <img height="320px" width="500px" src="img/simg2.jpeg">
+				   <img height="320px" width="500px" src="img/simg3.jpeg">
+				   <img height="320px" width="500px" src="img/simg4.jpeg">
+				   <img height="320px" width="500px" src="img/simg5.jpeg">
+				   <img height="320px" width="500px" src="img/simg6.jpeg">
+				</div>
 				</td>
 			</tr>
 			<tr>
@@ -58,7 +77,7 @@ li {
 			</tr>
 		</table>
 		<table align="center">
-			<tr>
+			<tr align="center">
 				<ul style="list-style-type:none; text-align: left;">
 					<li>Committed to cater every requirement of Product Development for Plastic Industry.
 </li>
