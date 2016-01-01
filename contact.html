@@ -1,0 +1,135 @@
+<html>
+<head>
+<link rel="shortcut icon" type="imgage/png" href="img/logo.ico">
+<title>
+	Anyums Design
+</title>
+
+<style>
+body {
+	text-align: center;
+}
+table {
+	text-align: center;
+	table-layout: fixed;
+}
+th, td {
+	padding: 5px;
+	text-align: center;
+}
+tr {
+	text-align: center;
+}
+li {
+	display: block;
+	padding: 10px;
+	color: blue;
+	font-weight: bold;
+}
+	td {
+		vertical-align: top;
+	}
+
+</style>
+
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter=new google.maps.LatLng(18.50423, 73.93370);
+function initialize() {
+  var mapProp = {
+    center:myCenter,
+    zoom:16,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  var marker=new google.maps.Marker({
+  position: myCenter,
+  map: map,
+  title: 'Laxman Villa',
+  });
+  map.addMarker(new MarkerOptions().title("Laxman"))
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+</head>
+<body>
+		<table align="center" >
+			<tr>
+				<td> <img src='img/logo.jpeg' /> </td>
+				<td>
+					<table>
+						<tr><h1> Anyums Design </h1></tr>
+						<tr><div style="color:blue; font-style: italic">INJECTING IDEAS THROUGH PLASTICS</div></tr>
+					</table> 
+				</td>
+			</tr>
+		</table>
+		<table align="center">
+			<tr>
+				<td><a href="details.html">Home</a></td>
+				<td><a href="details.html">Services</a></td>
+				<td><a href="details.html">Contact Us</a></td>
+				<td><a href="details.html">Infrastructure</a></td>
+			</tr>
+			<tr>
+				<td colspan="50%">
+					<div id="googleMap" style="width:500px;height:380px;"></div> <br>
+					<div align="left">
+					Our office address:<br>B-201, Laxman Villa, Bhosle Nagar,<br>Hadapsar, Pune - 411 028
+					<br>Phone: +91 992 368 1203<br>email: milind1203@gmail.com
+					</div>
+				</td>
+				<td colspan="50%" style="text-align: left; padding: 10px;">
+				<form id="contact-form" action="/" method="post">
+			        <div>
+			                <label>
+			                        <span>Name: (required)</span> <br>
+			                        <input placeholder="Please enter your name" type="text" tabindex="1" required autofocus size="60"><br><br>
+			                </label>
+			        </div>
+			        <div>
+			                <label>
+			                        <span>Email: (required)</span> <br>
+			                        <input placeholder="Please enter your email address" type="email" tabindex="2" required size="60"><br><br>
+			                </label>
+			        </div>
+			        <div>
+			                <label>
+			                        <span>Subject:</span> <br>
+			                        <input placeholder="Subject" type="text" tabindex="4" required size="60"><br><br>
+			                </label>
+			        </div>
+			        <div>
+			                <label>
+			                        <span>Message: (required)</span> <br>
+			                        <textarea placeholder="Include all the details you can" tabindex="5" required cols="60" rows="5" wrap="hard"></textarea><br><br>
+			                </label>
+			        </div>
+			        <div>
+			                <button name="submit" type="submit" id="contact-submit" style="font-size: inherit">Send Email</button>
+			        </div>
+				</form>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="details.html">Product Design</a></td>
+				<td><a href="details.html">Tool Design</a></td>
+				<td><a href="details.html">Manufacturing &amp; Industrialization</a></td>
+				<td><a href="details.html">raining &amp; Consultancy</a></td>
+			</tr>
+		</table>
+		<table align="center">
+		</table>
+		<table align="center">
+			<tr>
+				<td align="left" style="text-align: left; padding: 50px">
+					Copyright &copy; Anyums Design <br> ALL RIGHTS RESERVED.
+				</td>
+				<td align="right" style="text-align: right; padding: 50px">
+					CONTACT: Mr. Milind A. Agnihotri <br> milind@anyums.com <br> 9923681203
+				</td>
+			</tr>
+		</table>
+</body>
+</html>
